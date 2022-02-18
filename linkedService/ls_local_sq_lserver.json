@@ -1,0 +1,17 @@
+{
+	"name": "ls_local_sq_lserver",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=DESK-WIN11\\SQLEXPRESS;initial catalog=ALUNOS",
+			"userName": "clayton",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3MzhhNmQ4Zi1mNTkzLTQ4MjItYWU0OC04ZDg0OTAwYjIwNmMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "Iradf",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

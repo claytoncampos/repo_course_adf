@@ -1,0 +1,17 @@
+{
+	"name": "ls_localfilesclayton",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\Users\\clayton\\Downloads",
+			"userId": "clayton",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4Y2VmYmE5Yy1mZmI5LTRiY2EtYWFlMS02Yjg1Yjg1OTNiYzUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "Iradf",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
