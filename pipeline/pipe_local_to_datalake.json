@@ -92,7 +92,7 @@
 					"source": {
 						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "FileServerReadSettings",
+							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
 							"enablePartitionDiscovery": false
 						},
@@ -123,11 +123,12 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_local_systemfile",
+						"referenceName": "ds_generico_csv",
 						"type": "DatasetReference",
 						"parameters": {
+							"containerName": "csvfiles",
 							"fileName": "pessoasCSVFileSystem.csv",
-							"fileSeparator": ";"
+							"separetorName": ";"
 						}
 					}
 				],
