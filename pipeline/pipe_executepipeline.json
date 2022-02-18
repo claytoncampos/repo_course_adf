@@ -1,0 +1,69 @@
+{
+	"name": "pipe_executepipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "pip_getmetadata",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pipe_getmetadata",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "pipe_parametros",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "pip_getmetadata",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pipe_parametros",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"parametro": "70"
+					}
+				}
+			},
+			{
+				"name": "pipe_lookup",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "pipe_parametros",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pipe_lookup",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "adf_02_activities"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-02-11T20:51:09Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
