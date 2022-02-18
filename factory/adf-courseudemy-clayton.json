@@ -1,0 +1,9 @@
+{
+	"name": "adf-courseudemy-clayton",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3336fa35-c726-4b1f-a6db-c0fec6ed2a42",
+		"tenantId": "c21e4750-98a3-4db1-97bf-8055739d8aa4"
+	}
+}
